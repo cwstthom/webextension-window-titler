@@ -47,5 +47,12 @@ export default class WindowTitler {
       profileTitleSeparator, userWindowTitle, fullWindowTitleOpeningTag, fullWindowTitleClosingTag);
 
     await browser.windows.update(windowId, { titlePreface: fullWindowTitle });
+    // userChrome.css renders this live tooltip value as the wide toolbar label.
+    // The original browser action and popup remain intact and clickable.
+    
+    await browser.browserAction.setTitle({
+	    windowId,
+	    title: fullWindowTitle || userWindowTitle || profileTitle || 'Titler',
+    });
   }
 }
