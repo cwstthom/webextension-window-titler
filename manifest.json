@@ -14,7 +14,7 @@
     "chrome_style": true
   },
   "browser_action": {
-    "default_title": "Window Titler",
+    "default_title": " ",
     "default_popup": "/src/presentation/popup/popup.html",
     "default_icon": "/assets/icons/dark/icon-32.png",
     "theme_icons": [
